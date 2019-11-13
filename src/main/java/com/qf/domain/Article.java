@@ -11,6 +11,7 @@ public class Article {
 
     private User user;
     private Motif motif;
+    private Comment comment;
 
     public Motif getMotif() {
         return motif;
@@ -28,6 +29,14 @@ public class Article {
         this.user = user;
     }
 
+    public Comment getComment() {
+        return comment;
+    }
+
+    public void setComment(Comment comment) {
+        this.comment = comment;
+    }
+
     @Override
     public String toString() {
         return "Article{" +
@@ -38,6 +47,9 @@ public class Article {
                 ", a_content='" + a_content + '\'' +
                 ", a_date='" + a_date + '\'' +
                 ", a_lookCount=" + a_lookCount +
+                ", user=" + user +
+                ", motif=" + motif +
+                ", comment=" + comment +
                 '}';
     }
 

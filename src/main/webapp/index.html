@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Rabbit : Home</title>
+        <link rel="icon" type="image/icon" href="images/tabicon.ico">
+
+        <link rel="stylesheet" type="text/css" href="">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,700i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,700,700i|Josefin+Sans:700" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <link rel="icon" href="images/logo.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/jquery-3.1.0.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/personal.js"></script>
+        <style>
+            #userList{
+                font-size: 25px;
+            }
+            #aaa{
+                font-size: 25px;
+            }
+            #userList{
+                text-align:left;
+            }
+
+        </style>
+        <script>
+            $( document ).ready(function() {
+
+                $("#about_scroll").fadeOut();
+                $("#work_scroll").fadeOut();
+                $("#contact_scroll").fadeOut();
+                $("#changePassword").fadeOut();
+
+                $("#about").click(function(){
+                    $("#index").fadeOut();
+                    $("#about_scroll").fadeIn();
+                    $('#about_left').addClass('animated slideInLeft');
+                    $('#about_right').addClass('animated slideInRight');
+                });
+                $("#work").click(function(){
+                    $("#index").fadeOut();
+                    $("#work_scroll").fadeIn();
+                    $('#work_left').addClass('animated slideInLeft');
+                    $('#work_right').addClass('animated slideInRight');
+                });
+                $("#contact").click(function(){
+                    $("#index").fadeOut();
+                    $("#contact_scroll").fadeIn();
+                    $('#contact_left').addClass('animated slideInLeft');
+                    $('#contact_right').addClass('animated slideInRight');
+                });
+
+                $(".back").click(function(){
+                    $(".pages").fadeOut();
+                    $("#index").fadeIn();
+                    $('#index_left').addClass('animated slideInLeft');
+                    $('#index_right').addClass('animated slideInRight');
+                });
+                $("#changePd").click(function () {
+                    $("#update").fadeToggle(1000)
+                    $("#changePassword").fadeToggle(1000);
+                })
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="index">                                           <!-- Index starts here -->
+            <div class="container main">
+                <div class="row home">
+                    <div id = "index_left" class="col-md-6 left">
+                        <img class="img-responsive img-rabbit" src="images/1.jpg">
+                    </div>
+                    <div id = "index_right" class="col-md-6 text-center right">
+                        <a href="index.html" class="btn btn-rabbit back" > <i class="fa fa-angle-left" aria-hidden="true"></i> 返回 </a>
+                        <div class="logo">
+                            <img src="images/logo.png">
+                            <span id="aaa">个人信息</span>
+                        </div>
+                        <div id="bbb">
+                        <div id="userList">
+
+                        </div>
+                        </div>
+<!--                        <p class="home-description">-->
+<!--                            Hi, I am Rabbit, Web developer from michigan, US. I am passionate about design, development and interaction. I really love what I do.-->
+<!--                        </p>-->
+
+                        <div class="btn-group-vertical custom_btn animated slideinright">
+                            <div id="about" class="btn btn-rabbit">最近发表</div>
+                            <div id="work" class="btn btn-rabbit">最近评论</div>
+                            <div id="contact" class="btn btn-rabbit">修改资料</div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>                                                      <!-- index ends here -->
+
+        <div id="about_scroll" class="pages ">                      <!-- about strats here  -->
+            <div class="container main">
+                <div class="row">
+                    <div class="col-md-6 left" id="about_left">
+                        <img class="img-responsive img-rabbit" src="images/about.jpg">
+                    </div>
+
+                    <div class="col-md-6 right" id="about_right">
+                        <a href="index.html" class="btn btn-rabbit back" > <i class="fa fa-angle-left" aria-hidden="true"></i> Back to home </a>
+                        <div id="watermark">
+                            <h2 class="page-title" text-center>最近发表</h2>
+                            <div class="marker">a</div>
+                        </div>
+                        <div id="cc">
+<!--                        <div class='subtitle'>1</div>-->
+<!--                         <div><span>点击量：</span><span>发表时间：</span></div>-->
+<!--                        <div class="info">4</div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>                                                                <!-- About ends here -->
+
+
+
+        <div id="work_scroll" class="pages">                                  <!-- Work starts here -->
+            <div class="container main">
+                <div class="row">
+                    <div class="col-md-6" id="work_left">
+                        <div id="owl-demo" class="owl-carousel owl-theme">
+                            <div class="item"><img class="img-responsive img-rabbit" src="images/work.jpg"></div>
+                            <div class="item"><img class="img-responsive img-rabbit" src="images/home.jpg"></div>
+                            <div class="item"><img class="img-responsive img-rabbit" src="images/contact.jpg"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" id="work_right">
+                        <a href="index.html" class="btn btn-rabbit back" > <i class="fa fa-angle-left" aria-hidden="true"></i> Back to Home </a>
+                        <div id="watermark">
+                            <h2 class="page-title" text-center>评论</h2>
+                            <div class="marker">w</div>
+                        </div>
+                        <div id="dd">
+<!--                            -->
+<!--                            <div class='subtitle'><span>发表时间：</span></div>-->
+<!--                            <div class="info"><span>发表于文章：</span></div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>                                                                 <!-- Work ends here  -->
+
+
+        <div id="contact_scroll" class="pages">                             <!-- Contact starts here -->
+            <div class="container main">
+                <div class="row">
+                    <div class="col-md-6 left" id="contact_left">
+                        <img class="img-responsive img-rabbit" src="images/contact.jpg">
+                    </div>
+
+                    <div class="col-md-6 right" id="contact_right">
+                        <a href="index.html" class="btn btn-rabbit back" > <i class="fa fa-angle-left" aria-hidden="true"></i> Back to Home </a>
+                        <div id="changePd" class="btn btn-rabbit">修改密码</div>
+                        <div id="watermark">
+                            <h2 class="page-title" text-center>修改个人信息</h2>
+                            <div class="marker">c</div>
+                        </div>
+<!--                        <p class='subtitle'>I'm based in cheltenham in the UK, not far from Bristol, Birmingham, Oxford and Swindom. Drop me a line.-->
+<!--                        </p>-->
+                        <!-- form -->
+                        <form class="form_edit" id="update">
+<!--                            <div class="form-group">-->
+<!--                                <label for="exampleInputEmail1">用户名</label>-->
+<!--                                <input type="name" name="u_name" class="form-control" id="exampleInputName" placeholder="Name" value="1">-->
+<!--                            </div>-->
+
+<!--                            <div class="form-group">-->
+<!--                                <label for="exampleInputEmail1">邮箱</label>-->
+<!--                            <input type="email" name="u_email" class="form-control" id="exampleInputEmail1" placeholder="Email" value="2">-->
+<!--                            </div>-->
+
+<!--                            <div class="form-group">-->
+<!--                                <label>性别：</label>-->
+<!--                            <input type="radio" name="u_sex" value="男" chaecked="checked"><label>男</label>-->
+<!--                                <input type="radio" name="u_sex" value="女"><label>女</label>-->
+<!--                            </div>-->
+                            <button type="button" class="btn btn-rabbit submit" id="out">修改</button>
+                        </form>
+                        <form class="form_edit" id="changePassword">
+                            <div class="form-group">
+                                <label>旧密码</label>
+                                <input type="password" name="u_password1" class="form-control" id="exampleInputPassword1" placeholder="旧密码">
+                                <span id="oldPasswordSpan"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>新密码</label>
+                                <input type="password" name="u_password" class="form-control" id="exampleInputPassword" placeholder="新密码">
+                                <span id="newPasswordSpan"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>确认密码</label>
+                                <input type="password" name="u_password2" class="form-control" id="exampleInputPassword2" placeholder="确认密码">
+                                <span id="confirmPasswordSpan"></span>
+                            </div>
+                            <button type="button" class="btn btn-rabbit submit" id="change">修改密码</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>                                                              <!-- Contact ends here -->
+
+
+    </body>
+</html>

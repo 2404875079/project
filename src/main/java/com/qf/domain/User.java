@@ -4,6 +4,7 @@ public class User {
     private Integer u_id;
     private String u_username;
     private String u_password;
+    private String u_password1;
     private String u_name;
     private String u_sex;
     private String u_email;
@@ -16,6 +17,7 @@ public class User {
                 "u_id=" + u_id +
                 ", u_username='" + u_username + '\'' +
                 ", u_password='" + u_password + '\'' +
+                ", u_password1='" + u_password1 + '\'' +
                 ", u_name='" + u_name + '\'' +
                 ", u_sex='" + u_sex + '\'' +
                 ", u_email='" + u_email + '\'' +
@@ -86,5 +88,13 @@ public class User {
 
     public void setU_isBanned(Integer u_isBanned) {
         this.u_isBanned = u_isBanned;
+    }
+
+    public String getU_password1() {
+        return u_password1;
+    }
+
+    public void setU_password1(String u_password1) {
+        this.u_password1 = u_password1;
     }
 }

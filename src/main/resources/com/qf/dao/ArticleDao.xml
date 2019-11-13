@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.ArticleDao">
+    <resultMap id="articleMap" type="article">
+        <id property="a_id" column="a_id"></id>
+        <result property="a_mid" column="a_mid"></result>
+        <result property="a_headline" column="a_headline"></result>
+        <result property="a_content" column="a_content"></result>
+        <result property="a_date" column="a_date"></result>
+        <result property="a_lookCount" column="a_lookCount"></result>
+        <result property="a_flag" column="a_flag"></result>
+        <result property="a_uid" column="a_uid"></result>
+
+        <collection property="comment" ofType="comment">
+            <id column="c_id" property="c_id"></id>
+            <result column="c_uid" property="c_uid"></result>
+            <result column="c_aid" property="c_aid"></result>
+            <result column="c_content" property="c_content"></result>
+            <result column="c_date" property="c_date"></result>
+        </collection>
+    </resultMap>
+    <select id="getList" parameterType="int" resultType="article">
+        select * from article where a_uid=#{a_uid} and a_flag=0;
+    </select>
+    <select id="findAll" parameterType="int" resultMap="articleMap">
+        select a.a_headline,c.c_content,c.c_date from article a left join comment c on a.a_id = c.c_aid  where c_uid=#{c_uid}
+    </select>
+</mapper>
